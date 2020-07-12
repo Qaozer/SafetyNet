@@ -14,12 +14,10 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_3_1_RELEASE.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dao/PersonDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/model/ChildAlert.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/model/FireStation.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/model/MedicalRecord.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/model/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/web/controller/PersonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/maven_wrapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
