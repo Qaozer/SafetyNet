@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.SafetyNet</groupId>
 	<artifactId>SafetyNet</artifactId>
-	<version>0.0.1-DataAndModel-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>SafetyNet</name>
 	<description>Openclassrooms DA JAVA P5</description>
 
