@@ -5,9 +5,7 @@ import com.SafetyNet.model.MedicalRecord;
 import com.SafetyNet.model.Person;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.stereotype.Component;
+import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,17 +18,19 @@ public class Data {
     private List<Person> persons;
     private List<FireStation> firestations;
     private List<MedicalRecord> medicalrecords;
+    private static final Logger logger = Logger.getLogger(Data.class);
 
     public Data() {
     }
 
-    public Data(String path) throws ParseException {
+    public Data(String path) {
         Data data = new Data();
         ObjectMapper om = new ObjectMapper();
         om.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
         try {
             data = om.readValue(new File(path), Data.class);
         } catch (IOException e) {
+            logger.info("[ERROR] Couldn't read data.json.");
             e.printStackTrace();
         }
         this.medicalrecords = data.medicalrecords;
@@ -52,7 +52,13 @@ public class Data {
                     p.getStations().add(f.getStation());
                 }
             }
-            p.setAge(p.ageCalc());
+            try {
+                p.setAge(p.ageCalc());
+            } catch (ParseException e) {
+                logger.info("[ERROR] Couldn't calculate age for: "+p.getFirstName()+" "+p.getLastName()+".");
+                e.printStackTrace();
+            }
+
         }
     }
 

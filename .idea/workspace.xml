@@ -2,34 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2fc014f-c6b4-4c98-9c42-24d159056e12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_vintage_junit_vintage_engine_5_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_modelmapper_modelmapper_2_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/model/FireStation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/model/MedicalRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/model/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/maven_wrapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dao/MedicalRecordDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dao/MedicalRecordDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dto/MedDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/SafetyNet/service/PersonServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/SafetyNet/web/controller/PersonControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SafetyNet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SafetyNet.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/SafetyNetApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/SafetyNetApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dao/PersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dao/PersonDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dao/PersonDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dao/PersonDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dto/PersonMedDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dto/PersonMedDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/web/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/web/controller/PersonController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,84 +89,83 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SafetyNet" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.SafetyNet.*" />
+          <option name="PATTERN" value="com.SafetyNet.web.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.SafetyNet" />
-      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.DataTest" />
+      <option name="PACKAGE_NAME" value="com.SafetyNet.web.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.web.controller.PersonControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataTest.dataConstructorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonControllerTest.RetrieveAPersonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SafetyNet" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.SafetyNet.*" />
+          <option name="PATTERN" value="com.SafetyNet.web.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.SafetyNet" />
-      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.DataTest" />
-      <option name="METHOD_NAME" value="dataConstructorTest" />
+      <option name="PACKAGE_NAME" value="com.SafetyNet.web.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.web.controller.PersonControllerTest" />
+      <option name="METHOD_NAME" value="RetrieveAPersonTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataTest.propertiesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonControllerTest.givenWac_whenServletContext_thenItProvidesGreetController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SafetyNet" />
-      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.SafetyNet.*" />
+          <option name="PATTERN" value="com.SafetyNet.web.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.SafetyNet" />
-      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.DataTest" />
-      <option name="METHOD_NAME" value="propertiesTest" />
+      <option name="PACKAGE_NAME" value="com.SafetyNet.web.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.web.controller.PersonControllerTest" />
+      <option name="METHOD_NAME" value="givenWac_whenServletContext_thenItProvidesGreetController" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SafetyNetApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonServiceTest.getPersonsListFilteredByFirstAndLastNameShouldReturnListOfPersonsWhenMultiplePeopleHaveSameName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SafetyNet" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.SafetyNet.*" />
+          <option name="PATTERN" value="com.SafetyNet.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.SafetyNet" />
-      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.SafetyNetApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.SafetyNet.service" />
+      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.service.PersonServiceTest" />
+      <option name="METHOD_NAME" value="getPersonsListFilteredByFirstAndLastNameShouldReturnListOfPersonsWhenMultiplePeopleHaveSameName" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.SafetyNetApplication" />
-      <item itemvalue="JUnit.DataTest.dataConstructorTest" />
-      <item itemvalue="JUnit.DataTest.propertiesTest" />
-      <item itemvalue="JUnit.SafetyNetApplicationTests" />
-      <item itemvalue="JUnit.DataTest" />
+      <item itemvalue="JUnit.PersonServiceTest.getPersonsListFilteredByFirstAndLastNameShouldReturnListOfPersonsWhenMultiplePeopleHaveSameName" />
+      <item itemvalue="JUnit.PersonControllerTest.givenWac_whenServletContext_thenItProvidesGreetController" />
+      <item itemvalue="JUnit.PersonControllerTest.RetrieveAPersonTest" />
+      <item itemvalue="JUnit.PersonControllerTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.SafetyNetApplication" />
-        <item itemvalue="JUnit.SafetyNetApplicationTests" />
-        <item itemvalue="JUnit.DataTest.propertiesTest" />
-        <item itemvalue="JUnit.DataTest" />
-        <item itemvalue="JUnit.DataTest.dataConstructorTest" />
+        <item itemvalue="JUnit.PersonControllerTest" />
+        <item itemvalue="JUnit.PersonControllerTest.RetrieveAPersonTest" />
+        <item itemvalue="JUnit.PersonControllerTest.givenWac_whenServletContext_thenItProvidesGreetController" />
+        <item itemvalue="JUnit.PersonServiceTest.getPersonsListFilteredByFirstAndLastNameShouldReturnListOfPersonsWhenMultiplePeopleHaveSameName" />
       </list>
     </recent_temporary>
   </component>
@@ -204,10 +191,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594072675882" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1594595143350">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1595257897597">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594595143350" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595257897597" />
     <state x="756" y="379" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594221498533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -228,33 +215,37 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594069165644" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1594595227675">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1595265464619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594595227675" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1594595227675">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595265464619" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1595265464619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594595227675" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1594595227674">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595265464619" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1595265464619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594595227674" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1594595227675">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595265464619" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1595265464619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594595227675" />
-    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1594122440674">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595265464619" />
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1595252225462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594122440674" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1594594808622">
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595252225462" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1595247761341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594594808622" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1594125521306">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595247761341" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1595263356820">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594125521306" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1595263356820" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595249902166">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595249902166" />
   </component>
 </project>

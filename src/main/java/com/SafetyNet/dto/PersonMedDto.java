@@ -1,7 +1,5 @@
 package com.SafetyNet.dto;
 
-import com.SafetyNet.model.MedicalRecord;
-
 public class PersonMedDto {
     private String firstName;
     private String lastName;
@@ -10,7 +8,7 @@ public class PersonMedDto {
     private int zip;
     private int age;
     private String email;
-    private MedicalRecord medicalRecord;
+    private MedDto medicalRecord;
 
     public PersonMedDto() {
     }
@@ -71,11 +69,11 @@ public class PersonMedDto {
         this.email = email;
     }
 
-    public MedicalRecord getMedicalRecord() {
+    public MedDto getMedicalRecord() {
         return medicalRecord;
     }
 
-    public void setMedicalRecord(MedicalRecord medicalRecord) {
+    public void setMedicalRecord(MedDto medicalRecord) {
         this.medicalRecord = medicalRecord;
     }
 }

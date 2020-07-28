@@ -1,12 +1,12 @@
 package com.SafetyNet.service;
 
+import com.SafetyNet.dao.MedicalRecordDao;
 import com.SafetyNet.dao.PersonDao;
 import com.SafetyNet.model.ChildAlert;
 import com.SafetyNet.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,6 +16,9 @@ public class PersonService implements IPersonService {
 
     @Autowired
     private PersonDao personDao;
+
+    @Autowired
+    private MedicalRecordDao medicalRecordDao;
 
     public List<Person> getPersonsList(){
         return personDao.getPersonsList();
@@ -27,7 +30,7 @@ public class PersonService implements IPersonService {
         return personList;
     }
 
-    public ChildAlert getChildAlert(String address) throws ParseException {
+    public ChildAlert getChildAlert(String address) {
         List<Person> personList = personDao.getPersonsList().stream().filter(p -> p.getAddress().equals(address))
                 .collect(Collectors.toList());
         ChildAlert childAlert = new ChildAlert(new ArrayList<>(), new ArrayList<>());
@@ -47,5 +50,18 @@ public class PersonService implements IPersonService {
         List<String> emailList = new ArrayList<>();
         personList.stream().forEach(p -> emailList.add(p.getEmail()));
         return emailList;
+    }
+
+    public void delete(String firstName, String lastName){
+        personDao.delete(firstName, lastName);
+        medicalRecordDao.delete(firstName, lastName);
+    }
+
+    public void add(Person person){
+        personDao.add(person);
+    }
+
+    public void update(Person person){
+        personDao.update(person);
     }
 }
