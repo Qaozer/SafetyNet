@@ -50,7 +50,7 @@ public class FirestationService implements IFirestationService {
         List<Person> personList = personService.getPersonsList().stream().filter(p -> p.getStations().contains(station)).collect(Collectors.toList());
         Coverage coverage = new Coverage(personList, 0, 0);
         for (Person p: coverage.getPersonList()){
-            if (p.getAge() < 18){
+            if (p.getAge() <= 18){
                 coverage.addOneChild();
             } else {
                 coverage.addOneAdult();

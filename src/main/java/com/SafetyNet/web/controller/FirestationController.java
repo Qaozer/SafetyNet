@@ -75,7 +75,7 @@ public class FirestationController {
     }
 
     @DeleteMapping(value = "firestation")
-    public ResponseEntity deleteAddress (@RequestParam(value = "address", required = false, defaultValue = "") String address,
+    public ResponseEntity deleteStation (@RequestParam(value = "address", required = false, defaultValue = "") String address,
                                          @RequestParam(value = "station", required = false, defaultValue = "-1") int stationNumber) throws UnsupportedEncodingException {
         if (!address.equals("")){
             String decoded = URLDecoder.decode(address, StandardCharsets.UTF_8.toString());
