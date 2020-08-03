@@ -1,9 +1,14 @@
 package com.SafetyNet.web.controller;
 
+import com.SafetyNet.dto.PersonDto;
+import com.SafetyNet.model.Person;
+import com.SafetyNet.service.PersonService;
 import org.json.JSONException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.modelmapper.ModelMapper;
 import org.skyscreamer.jsonassert.JSONAssert;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
@@ -11,11 +16,15 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 public class PersonControllerTest {
 
     @LocalServerPort
@@ -24,6 +33,12 @@ public class PersonControllerTest {
     TestRestTemplate restTemplate = new TestRestTemplate();
 
     HttpHeaders httpHeaders = new HttpHeaders();
+
+    @Autowired
+    private PersonService personService;
+
+    @Autowired
+    private ModelMapper modelMapper;
 
     @Test
     public void PersonInfoTest() throws JSONException {
@@ -52,7 +67,62 @@ public class PersonControllerTest {
         JSONAssert.assertEquals(expected, response.getBody(), true);
     }
 
+    @Test
+    public void addPersonTest(){
+        PersonDto person = createPersonDto();
+        assertFalse(personService.contains(modelMapper.map(person, Person.class)));
+        HttpEntity<PersonDto> entity = new HttpEntity<PersonDto>(person, httpHeaders);
+        ResponseEntity response = restTemplate.exchange(
+                createURLWithPort("person"),HttpMethod.POST, entity, String.class
+        );
+        assertTrue(personService.contains(modelMapper.map(person, Person.class)));
+    }
 
+    @Test
+    public void updatePersonTest(){
+        addPersonTest();
+        String email = personService.getPersonsList().stream().filter(
+                p-> p.getFirstName().equals("Bob") && p.getLastName().equals("Morane")
+        ).findFirst().get().getEmail();
+        assertEquals("BobM@Aventure.fr", email);
+        String nMail = "MoraneM@Aventure.fr";
+        PersonDto person = createPersonDto();
+        person.setEmail(nMail);
+        HttpEntity<PersonDto> entity = new HttpEntity<PersonDto>(person, httpHeaders);
+        ResponseEntity response = restTemplate.exchange(
+                createURLWithPort("person"),HttpMethod.PUT, entity, String.class
+        );
+        email = personService.getPersonsList().stream().filter(
+                p-> p.getFirstName().equals("Bob") && p.getLastName().equals("Morane")
+        ).findFirst().get().getEmail();
+        assertEquals(nMail, email);
+    }
+
+    @Test
+    public void deletePersonTest(){
+        addPersonTest();
+        PersonDto person = createPersonDto();
+        Person actualP = modelMapper.map(person, Person.class);
+        assertTrue(personService.contains(actualP));
+        HttpEntity<String> entity = new HttpEntity<>(null, httpHeaders);
+        ResponseEntity response = restTemplate.exchange(
+                createURLWithPort("person?firstName=Bob&lastName=Morane"), HttpMethod.DELETE, entity, String.class
+        );
+        assertFalse(personService.contains(actualP));
+    }
+
+
+    private PersonDto createPersonDto(){
+        PersonDto person = new PersonDto();
+        person.setFirstName("Bob");
+        person.setLastName("Morane");
+        person.setEmail("BobM@Aventure.fr");
+        person.setPhone("0000000000");
+        person.setZip(12345);
+        person.setCity("Minas Tirith");
+        person.setAddress("1 rue du trou");
+        return person;
+    }
     private String createURLWithPort(String uri) {
         return "http://localhost:" + port + uri;
     }
