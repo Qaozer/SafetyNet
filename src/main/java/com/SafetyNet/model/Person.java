@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 public class Person {
     private String firstName;
@@ -137,5 +138,27 @@ public class Person {
                 ", stations=" + stations +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return zip == person.zip &&
+                age == person.age &&
+                firstName.equals(person.firstName) &&
+                lastName.equals(person.lastName) &&
+                address.equals(person.address) &&
+                city.equals(person.city) &&
+                phone.equals(person.phone) &&
+                email.equals(person.email) &&
+                Objects.equals(medicalRecord, person.medicalRecord) &&
+                Objects.equals(stations, person.stations);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, address, city, zip, phone, email, medicalRecord, stations, age);
     }
 }

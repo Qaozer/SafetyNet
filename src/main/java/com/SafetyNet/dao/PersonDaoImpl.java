@@ -69,4 +69,17 @@ public class PersonDaoImpl implements PersonDao {
             }
         }
     }
+
+    @Override
+    public boolean contains(Person person) {
+        String firstName = person.getFirstName();
+        String lastName = person.getLastName();
+        Optional<Person> optional = data.getPersons().stream().filter(
+                p-> p.getFirstName().equals(firstName) && p.getLastName().equals(lastName)
+        ).findFirst();
+        if (optional.isPresent()){
+            return true;
+        }
+        return false;
+    }
 }

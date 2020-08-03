@@ -14,4 +14,6 @@ public interface PersonDao {
     public void add(Person person);
 
     public void update(Person person);
+
+    public boolean contains (Person person);
 }

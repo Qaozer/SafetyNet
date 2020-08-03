@@ -66,7 +66,11 @@ public class PersonController {
     public ResponseEntity addPerson (@RequestBody PersonDto person){
         logger.info("[POST] Request to add a person to dataset.");
         Person added = modelMapper.map(person, Person.class);
-        personService.add(added);
+        if(personService.contains(added)){
+            logger.info("Person already in dataset.");
+        } else {
+            personService.add(added);
+        }
         return ResponseEntity.ok().build();
     }
 
