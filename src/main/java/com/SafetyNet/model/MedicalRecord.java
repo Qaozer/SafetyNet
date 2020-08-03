@@ -1,6 +1,7 @@
 package com.SafetyNet.model;
 
 import java.util.List;
+import java.util.Objects;
 
 public class MedicalRecord {
     private String firstName;
@@ -69,5 +70,22 @@ public class MedicalRecord {
                 ", medications=" + medications +
                 ", allergies=" + allergies +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MedicalRecord that = (MedicalRecord) o;
+        return firstName.equals(that.firstName) &&
+                lastName.equals(that.lastName) &&
+                birthdate.equals(that.birthdate) &&
+                medications.equals(that.medications) &&
+                allergies.equals(that.allergies);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, birthdate, medications, allergies);
     }
 }

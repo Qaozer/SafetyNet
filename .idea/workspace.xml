@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2fc014f-c6b4-4c98-9c42-24d159056e12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonarsource_scanner_api_sonar_scanner_api_2_14_0_2002.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonarsource_scanner_maven_sonar_maven_plugin_3_7_0_1746.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_plexus_plexus_cipher_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_plexus_plexus_sec_dispatcher_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/SafetyNet/service/FirestationControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dto/MedicalRecordDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/SafetyNet/web/controller/MedicalRecordControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SafetyNet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SafetyNet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/service/FirestationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/service/FirestationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/web/controller/FirestationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/web/controller/FirestationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/model/MedicalRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/model/MedicalRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/service/MedicalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/service/MedicalService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +64,7 @@
       <recent name="D:\Formation Java\Projet 5\SafetyNet\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SafetyNetApplication">
+  <component name="RunManager" selected="JUnit.MedicalRecordControllerTest">
     <configuration name="SafetyNetApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.SafetyNet.SafetyNetApplication" />
       <module name="SafetyNet" />
@@ -101,7 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MedicalRecordControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SafetyNet" />
       <extension name="coverage">
         <pattern>
@@ -110,13 +103,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.SafetyNet.web.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.web.controller.PersonControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.web.controller.MedicalRecordControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonControllerTest.RetrieveAPersonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MedicalRecordControllerTest.addMedicalRecordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SafetyNet" />
       <extension name="coverage">
         <pattern>
@@ -125,14 +118,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.SafetyNet.web.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.web.controller.PersonControllerTest" />
-      <option name="METHOD_NAME" value="RetrieveAPersonTest" />
+      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.web.controller.MedicalRecordControllerTest" />
+      <option name="METHOD_NAME" value="addMedicalRecordTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonControllerTest.givenWac_whenServletContext_thenItProvidesGreetController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MedicalRecordControllerTest.updateMedicalRecordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SafetyNet" />
       <extension name="coverage">
         <pattern>
@@ -141,8 +134,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.SafetyNet.web.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.web.controller.PersonControllerTest" />
-      <option name="METHOD_NAME" value="givenWac_whenServletContext_thenItProvidesGreetController" />
+      <option name="MAIN_CLASS_NAME" value="com.SafetyNet.web.controller.MedicalRecordControllerTest" />
+      <option name="METHOD_NAME" value="updateMedicalRecordTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,18 +143,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.SafetyNetApplication" />
-      <item itemvalue="JUnit.PersonControllerTest.givenWac_whenServletContext_thenItProvidesGreetController" />
-      <item itemvalue="JUnit.PersonControllerTest.RetrieveAPersonTest" />
-      <item itemvalue="JUnit.PersonControllerTest" />
       <item itemvalue="JUnit.FirestationControllerTest.getCoverageTest" />
+      <item itemvalue="JUnit.MedicalRecordControllerTest.addMedicalRecordTest" />
+      <item itemvalue="JUnit.MedicalRecordControllerTest" />
+      <item itemvalue="JUnit.MedicalRecordControllerTest.updateMedicalRecordTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MedicalRecordControllerTest" />
+        <item itemvalue="JUnit.MedicalRecordControllerTest.addMedicalRecordTest" />
+        <item itemvalue="JUnit.MedicalRecordControllerTest.updateMedicalRecordTest" />
         <item itemvalue="Application.SafetyNetApplication" />
         <item itemvalue="JUnit.FirestationControllerTest.getCoverageTest" />
-        <item itemvalue="JUnit.PersonControllerTest" />
-        <item itemvalue="JUnit.PersonControllerTest.RetrieveAPersonTest" />
-        <item itemvalue="JUnit.PersonControllerTest.givenWac_whenServletContext_thenItProvidesGreetController" />
       </list>
     </recent_temporary>
   </component>
@@ -187,10 +180,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594072675882" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1595931482440">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1596439620415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595931482440" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596439620415" />
     <state x="756" y="379" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594221498533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -211,22 +204,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594069165644" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1595945077628">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1596441816689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595945077628" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1595945077628">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596441816689" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1596441816689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595945077628" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1595945077628">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596441816689" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1596441816689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595945077628" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1595945077628">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596441816689" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1596441816689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595945077628" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596441816689" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1595934969961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -255,10 +248,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="604" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595932791235" />
-    <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1595263356820">
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1596437092290">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1595263356820" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-2" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-3" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-4" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-4/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-5" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-5/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-6" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-6/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-7" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-7/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-8" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-8/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-9" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-9/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="772" y="420" key="git4idea.ui.GitStashDialog" timestamp="1596435005452">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="772" y="420" key="git4idea.ui.GitStashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596435005452" />
+    <state x="662" y="368" key="git4idea.ui.GitUnstashDialog" timestamp="1596435088161">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="368" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596435088161" />
     <state x="342" y="222" key="new project wizard" timestamp="1596061307739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

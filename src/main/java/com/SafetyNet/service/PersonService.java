@@ -3,12 +3,14 @@ package com.SafetyNet.service;
 import com.SafetyNet.dao.MedicalRecordDao;
 import com.SafetyNet.dao.PersonDao;
 import com.SafetyNet.model.ChildAlert;
+import com.SafetyNet.model.MedicalRecord;
 import com.SafetyNet.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -58,6 +60,12 @@ public class PersonService implements IPersonService {
     }
 
     public void add(Person person){
+        Optional<MedicalRecord> medicalRecord = medicalRecordDao.getMedicalRecords().stream().filter(
+                m-> m.getFirstName().equals(person.getFirstName()) && m.getLastName().equals(person.getLastName())
+        ).findFirst();
+        if (medicalRecord.isPresent()){
+            person.setMedicalRecord(medicalRecord.get());
+        }
         personDao.add(person);
     }
 
