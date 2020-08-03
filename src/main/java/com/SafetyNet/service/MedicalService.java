@@ -6,10 +6,12 @@ import com.SafetyNet.model.MedicalRecord;
 import com.SafetyNet.model.Person;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MedicalService implements IMedicalService {
 
     private static final Logger LOGGER = Logger.getLogger(MedicalService.class);
