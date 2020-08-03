@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2fc014f-c6b4-4c98-9c42-24d159056e12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonarsource_scanner_api_sonar_scanner_api_2_14_0_2002.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonarsource_scanner_maven_sonar_maven_plugin_3_7_0_1746.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_plexus_plexus_cipher_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_plexus_plexus_sec_dispatcher_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/SafetyNet/service/FirestationControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/service/IMedicalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/service/MedicalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/web/controller/MedicalRecordController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SafetyNet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SafetyNet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/service/FirestationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/service/FirestationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/web/controller/FirestationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/web/controller/FirestationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dao/MedicalRecordDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dao/MedicalRecordDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dao/MedicalRecordDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/dao/MedicalRecordDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SafetyNet/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SafetyNet/service/PersonService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,10 +182,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594072675882" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1595931482440">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1596435854861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595931482440" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596435854861" />
     <state x="756" y="379" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594221498533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -255,10 +250,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="604" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595932791235" />
-    <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1595263356820">
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1596437092290">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1595263356820" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-2" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-3" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-4" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-4/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-5" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-5/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-6" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-6/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-7" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-7/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-8" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-8/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-9" timestamp="1596437092290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-9/0.0.1920.1040@0.0.1920.1040" timestamp="1596437092290" />
+    <state x="772" y="420" key="git4idea.ui.GitStashDialog" timestamp="1596435005452">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="772" y="420" key="git4idea.ui.GitStashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596435005452" />
+    <state x="662" y="368" key="git4idea.ui.GitUnstashDialog" timestamp="1596435088161">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="368" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596435088161" />
     <state x="342" y="222" key="new project wizard" timestamp="1596061307739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
