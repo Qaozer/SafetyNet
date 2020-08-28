@@ -13,4 +13,5 @@ public interface IFirestationService {
     List<String> getPhonesByStation(int station);
     FireAlert getFireAlert(String address);
     List<Home> getFloodAlert(List<Integer> stationNumbers);
+    boolean contains (FireStation fireStation);
 }

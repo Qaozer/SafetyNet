@@ -84,6 +84,8 @@ public class FirestationController {
         } else if (stationNumber != -1){
             LOGGER.info("[DEL] Request to delete firestation for stationNumber "+stationNumber);
             firestationService.deleteStation(stationNumber);
+        } else {
+            LOGGER.info("[DEL] Request to delete firestation denied : wrong parameters");
         }
         return ResponseEntity.ok().build();
     }
