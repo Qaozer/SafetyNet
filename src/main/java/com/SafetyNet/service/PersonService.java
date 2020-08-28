@@ -1,8 +1,10 @@
 package com.SafetyNet.service;
 
+import com.SafetyNet.dao.FirestationDao;
 import com.SafetyNet.dao.MedicalRecordDao;
 import com.SafetyNet.dao.PersonDao;
 import com.SafetyNet.model.ChildAlert;
+import com.SafetyNet.model.FireStation;
 import com.SafetyNet.model.MedicalRecord;
 import com.SafetyNet.model.Person;
 import org.apache.log4j.Logger;
@@ -23,11 +25,16 @@ public class PersonService implements IPersonService {
     private PersonDao personDao;
 
     @Autowired
+    private FirestationDao firestationDao;
+
+    @Autowired
     private MedicalRecordDao medicalRecordDao;
+
     @Override
     public List<Person> getPersonsList(){
         return personDao.getPersonsList();
     }
+
     @Override
     public List<Person> getPersonsListFilteredByFirstAndLastName(String firstName, String lastName){
         List<Person> personList = personDao.getPersonsList().stream().filter(p -> p.getFirstName().equals(firstName) &&
@@ -63,17 +70,14 @@ public class PersonService implements IPersonService {
     }
     @Override
     public void add(Person person){
-        Optional<MedicalRecord> medicalRecord = medicalRecordDao.getMedicalRecords().stream().filter(
-                m-> m.getFirstName().equals(person.getFirstName()) && m.getLastName().equals(person.getLastName())
-        ).findFirst();
-        if (medicalRecord.isPresent()){
-            person.setMedicalRecord(medicalRecord.get());
-        }
+        setMedicalRecord(person);
+        setStations(person);
         personDao.add(person);
     }
 
     @Override
     public void update(Person person){
+        setStations(person);
         personDao.update(person);
     }
 
@@ -89,5 +93,23 @@ public class PersonService implements IPersonService {
             return true;
         }
         return false;
+    }
+
+    private void setMedicalRecord(Person person){
+        Optional<MedicalRecord> medicalRecord = medicalRecordDao.getMedicalRecords().stream().filter(
+                m-> m.getFirstName().equals(person.getFirstName()) && m.getLastName().equals(person.getLastName())
+        ).findFirst();
+        if (medicalRecord.isPresent()){
+            person.setMedicalRecord(medicalRecord.get());
+        }
+    }
+    private void setStations (Person person){
+        if (person.getStations() == null){
+            person.setStations(new ArrayList<>());
+        }
+        List<FireStation> stations = firestationDao.getFirestationsList().stream().filter(s -> s.getAddress().equals(person.getAddress())).collect(Collectors.toList());
+        for (FireStation f : stations){
+            person.getStations().add(f.getStation());
+        }
     }
 }

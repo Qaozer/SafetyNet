@@ -19,6 +19,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -88,6 +91,7 @@ public class PersonControllerTest {
         String nMail = "MoraneM@Aventure.fr";
         PersonDto person = createPersonDto();
         person.setEmail(nMail);
+        person.setAddress("1509 Culver St");
         HttpEntity<PersonDto> entity = new HttpEntity<PersonDto>(person, httpHeaders);
         ResponseEntity response = restTemplate.exchange(
                 createURLWithPort("person"),HttpMethod.PUT, entity, String.class
@@ -95,7 +99,11 @@ public class PersonControllerTest {
         email = personService.getPersonsList().stream().filter(
                 p-> p.getFirstName().equals("Bob") && p.getLastName().equals("Morane")
         ).findFirst().get().getEmail();
+        List<Integer> stations = personService.getPersonsList().stream().filter(
+                p-> p.getFirstName().equals("Bob") && p.getLastName().equals("Morane"))
+                .findFirst().get().getStations();
         assertEquals(nMail, email);
+        assertEquals(Arrays.asList(3),stations);
     }
 
     @Test
