@@ -31,8 +31,12 @@ public class FirestationDaoImpl implements FirestationDao {
 
     @Override
     public void add(FireStation fireStation) {
-        LOGGER.info("Added to firestations List {address: "+fireStation.getAddress()+" station: "+fireStation.getStation()+".");
+        LOGGER.info("Added to firestations List address: "+fireStation.getAddress()+" station: "+fireStation.getStation()+".");
         data.getFirestations().add(fireStation);
+        List<Person> persons = personDao.getPersonsList().stream().filter(p -> p.getAddress().equals(fireStation.getAddress())).collect(Collectors.toList());
+        for (Person p: persons){
+            addStationToPerson(p, fireStation.getStation());
+        }
     }
 
     @Override
@@ -41,6 +45,12 @@ public class FirestationDaoImpl implements FirestationDao {
         if(toUpdate.isPresent()){
             FireStation stored = toUpdate.get();
             if (stored.getStation() != fireStation.getStation()){
+                int oldStation = stored.getStation();
+                List<Person> persons = personDao.getPersonsList().stream().filter(p-> p.getStations().contains(oldStation)).collect(Collectors.toList());
+                for(Person p : persons){
+                    removeStationFromPerson(p, oldStation);
+                    addStationToPerson(p, fireStation.getStation());
+                }
                 stored.setStation(fireStation.getStation());
                 LOGGER.info("Updated station number to "+fireStation.getStation()+" for address : "+fireStation.getAddress()+".");
             }
@@ -87,6 +97,12 @@ public class FirestationDaoImpl implements FirestationDao {
                 p.getStations().remove(i);
                 LOGGER.info("Removed station "+stationNumber+" from stations list of "+p.getFirstName()+" "+p.getLastName()+".");
             }
+        }
+    }
+
+    private void addStationToPerson(Person p, int stationNumber){
+        if(!p.getStations().contains(stationNumber)){
+            p.getStations().add(stationNumber);
         }
     }
 }

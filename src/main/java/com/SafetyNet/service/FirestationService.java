@@ -103,4 +103,9 @@ public class FirestationService implements IFirestationService {
         }
         return homes;
     }
+
+    @Override
+    public boolean contains(FireStation fireStation) {
+        return firestationDao.getFirestationsList().contains(fireStation);
+    }
 }

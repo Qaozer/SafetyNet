@@ -1,10 +1,12 @@
 package com.SafetyNet.web.controller;
 
+import com.SafetyNet.dto.MedicalRecordDto;
 import com.SafetyNet.model.MedicalRecord;
 import com.SafetyNet.service.MedicalService;
 import org.json.JSONException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -34,6 +36,8 @@ public class MedicalRecordControllerTest {
 
     HttpHeaders httpHeaders = new HttpHeaders();
 
+    @Autowired
+    private ModelMapper modelMapper;
 
     @Autowired
     private MedicalService medicalService;
@@ -59,7 +63,7 @@ public class MedicalRecordControllerTest {
     @Test
     public void addMedicalRecordTest() throws JSONException {
         MedicalRecord medicalRecord = createMedicalRecord("aznol:340mg", "peanuts");
-        HttpEntity<MedicalRecord> entity = new HttpEntity<MedicalRecord>(medicalRecord, httpHeaders);
+        HttpEntity<MedicalRecordDto> entity = new HttpEntity<>(modelMapper.map(medicalRecord,MedicalRecordDto.class), httpHeaders);
         ResponseEntity<String> response = restTemplate.exchange(createURLWithPort("medicalRecord"), HttpMethod.POST,entity,String.class);
         assertTrue(medicalService.contains(medicalRecord));
     }
@@ -68,7 +72,7 @@ public class MedicalRecordControllerTest {
     public void updateMedicalRecordTest() throws JSONException {
         addMedicalRecordTest();
         MedicalRecord medicalRecord = createMedicalRecord("aznol:350mg", "peanuts");
-        HttpEntity<MedicalRecord> entity = new HttpEntity<MedicalRecord>(medicalRecord, httpHeaders);
+        HttpEntity<MedicalRecordDto> entity = new HttpEntity<>(modelMapper.map(medicalRecord,MedicalRecordDto.class), httpHeaders);
         ResponseEntity<String> response = restTemplate.exchange(createURLWithPort("medicalRecord"), HttpMethod.PUT,entity,String.class);
         assertTrue(medicalService.contains(medicalRecord));
     }
