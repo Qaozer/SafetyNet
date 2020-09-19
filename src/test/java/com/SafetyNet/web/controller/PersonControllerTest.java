@@ -20,6 +20,7 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -87,11 +88,20 @@ public class PersonControllerTest {
         String email = personService.getPersonsList().stream().filter(
                 p-> p.getFirstName().equals("Bob") && p.getLastName().equals("Morane")
         ).findFirst().get().getEmail();
+        String address = personService.getPersonsList().stream().filter(
+                p-> p.getFirstName().equals("Bob") && p.getLastName().equals("Morane")
+        ).findFirst().get().getAddress();
+        List<Integer> stations = personService.getPersonsList().stream().filter(
+                p-> p.getFirstName().equals("Bob") && p.getLastName().equals("Morane"))
+                .findFirst().get().getStations();
         assertEquals("BobM@Aventure.fr", email);
+        assertEquals("1 rue du trou", address);
+        assertEquals(Collections.emptyList(), stations);
         String nMail = "MoraneM@Aventure.fr";
+        String nAddress = "1509 Culver St";
         PersonDto person = createPersonDto();
         person.setEmail(nMail);
-        person.setAddress("1509 Culver St");
+        person.setAddress(nAddress);
         HttpEntity<PersonDto> entity = new HttpEntity<PersonDto>(person, httpHeaders);
         ResponseEntity response = restTemplate.exchange(
                 createURLWithPort("person"),HttpMethod.PUT, entity, String.class
@@ -99,10 +109,14 @@ public class PersonControllerTest {
         email = personService.getPersonsList().stream().filter(
                 p-> p.getFirstName().equals("Bob") && p.getLastName().equals("Morane")
         ).findFirst().get().getEmail();
-        List<Integer> stations = personService.getPersonsList().stream().filter(
+        stations = personService.getPersonsList().stream().filter(
                 p-> p.getFirstName().equals("Bob") && p.getLastName().equals("Morane"))
                 .findFirst().get().getStations();
+        address = personService.getPersonsList().stream().filter(
+                p-> p.getFirstName().equals("Bob") && p.getLastName().equals("Morane")
+        ).findFirst().get().getAddress();
         assertEquals(nMail, email);
+        assertEquals(nAddress, address);
         assertEquals(Arrays.asList(3),stations);
     }
 
